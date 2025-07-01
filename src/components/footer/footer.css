@@ -1,0 +1,41 @@
+footer {
+    /* border-radius: 5px; */
+    margin-top: 20px;
+    padding-top: 7px;
+    text-align: center;
+  }
+  
+  footer p {
+    margin: 10px 0;
+    font-size: 14px;
+  }
+  
+  footer ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  footer ul li {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  footer ul li img {
+    width: 40px;
+    height: 40px;
+  }
+  
+  /* Utility Styles */
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  a:hover {
+    color: #0056b3;
+  }
