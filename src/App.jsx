@@ -5,7 +5,7 @@ import Cart from "./pages/Cart";
 import Header from "./components/header";
 import Login from "./pages/Login";
 import { AuthProvider, AuthContext } from "./context/AuthContext";
-import Register from "./pages/register";
+import Register from "./pages/Register";
 import Footer from "./components/footer";
 import { useContext } from "react";
 
