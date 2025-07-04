@@ -1,7 +1,7 @@
 import "./App.css";
 import { Route, Routes, Navigate } from "react-router-dom";
 import Home from "./pages/Home";
-import Cart from "./pages/cart";
+import Cart from "./pages/Cart";
 import Header from "./components/header";
 import Login from "./pages/login";
 import { AuthProvider, AuthContext } from "./context/AuthContext";
