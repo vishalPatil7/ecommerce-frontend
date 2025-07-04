@@ -35,9 +35,9 @@ export default function Products() {
       ) : (
         <div className="min-h-[80vh] grid sm:grid-cols-2 md:grid-cols-3  lg:grid-cols-4 max-w-6xl mx-auto p-3">
           {products && products.length
-            ? products.map((productItem) => {
+            ? products.map((productItem) => (
                 <ProductTile key={productItem.id} product={productItem} />
-              })
+              ))
             : null}
         </div>
       )}
