@@ -14,7 +14,7 @@ export const AuthProvider = ({ children }) => {
 
   const login = async (email, password) => {
     try {
-      const response = await fetch("http://localhost:5000/api/auth/login", {
+      const response = await fetch(`${API_BASE}/api/auth/login`, {
         method: "POST",
         headers: { "content-type": "application/json" },
         body: JSON.stringify({ email, password }),
@@ -24,9 +24,9 @@ export const AuthProvider = ({ children }) => {
       if (response.ok) {
         setUser(data.user);
         localStorage.setItem("user", JSON.stringify(data.user));
-        alert("User logged in")
+        alert("User logged in");
 
-        navigate("/");        
+        navigate("/");
       } else {
         alert(data.message);
       }
@@ -37,7 +37,7 @@ export const AuthProvider = ({ children }) => {
 
   const register = async (name, email, password) => {
     try {
-      const response = await fetch("http://localhost:5000/api/auth/register", {
+      const response = await fetch(`${API_BASE}/api/auth/register`, {
         method: "POST",
         headers: { "content-type": "application/json" },
         body: JSON.stringify({ name, email, password }),
@@ -47,7 +47,7 @@ export const AuthProvider = ({ children }) => {
       if (response.ok) {
         setUser(data.user);
         localStorage.setItem("user", JSON.stringify(data.user));
-        alert(data.message); 
+        alert(data.message);
       } else {
         alert(data.message);
       }
