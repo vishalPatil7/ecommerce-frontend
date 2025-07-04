@@ -3,7 +3,7 @@ import { Route, Routes, Navigate } from "react-router-dom";
 import Home from "./pages/Home";
 import Cart from "./pages/Cart";
 import Header from "./components/header";
-import Login from "./pages/login";
+import Login from "./pages/Login";
 import { AuthProvider, AuthContext } from "./context/AuthContext";
 import Register from "./pages/register";
 import Footer from "./components/footer";
