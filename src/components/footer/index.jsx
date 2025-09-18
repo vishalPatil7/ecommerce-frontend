@@ -31,7 +31,7 @@ export default function Footer() {
           {socials.map((social, index) => (
             <li key={index}>
               <Link to={social.link} target="_blank">
-                <img src={social.logo} height={50} width={50} />
+                <img src={social.logo} alt={social.name} height={50} width={50} />
               </Link>
             </li>
           ))}

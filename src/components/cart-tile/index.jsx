@@ -33,7 +33,7 @@ export default function CartTile({ cartItem }) {
         />
         <div className="ml-10 mr-10 flex flex-col pr-10 items-center self-start space-y-5">
           <p className="text-white font-extrabold self-center">
-            {cartItem?.price}
+            ${cartItem?.price}
           </p>
           <div className="flex items-center space-x-3 bg-gray-800 text-white rounded-lg p-2">
             <button
