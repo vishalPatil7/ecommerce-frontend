@@ -27,7 +27,7 @@ export default function CartTile({ cartItem }) {
     <div className="flex items-center p-5 justify-between bg-red-500 mt-2 mb-2 rounded-xl">
       <div className="flex p-3">
         <img
-          src={cartItem?.image}
+          src={cartItem?.images[1] || product.images[0]}
           className="h-28 rounded-lg"
           alt={cartItem?.title}
         />

@@ -1,20 +1,26 @@
 import { useEffect, useState } from "react";
 import { FidgetSpinner } from "react-loader-spinner";
 import ProductTile from "../components/product-tile";
+import API_BASE from "../config";
 
 export default function Products() {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(false);
 
   async function fetchListOfProducts() {
-    setLoading(true);
-    const response = await fetch("https://api.escuelajs.co/api/v1/products");
-    const data = await response.json();
-
-    if (response.ok) {
-      setProducts(data);
+    try {
+      setLoading(true);
+      const response = await fetch(`${API_BASE}/api/products`);
+      const data = await response.json();
+      console.log("Status of response: ", response.status)
+      if (response.ok) {
+        setProducts(data);
+      }
+    } catch (error) {
+      console.error("Error fetching products:", error);
+    } finally {
+      setLoading(false);
     }
-    setLoading(false);
   }
 
   useEffect(() => {
